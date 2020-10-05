@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Rochester&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+body {
+    background-image: url(../productBackground.jpg);
+    background-repeat: none;
+    background-size: cover;
+    background-color: lavenderblush;
+}
+
+h1 {
+    font-size: 40pt;
+    font-family: 'Rochester', cursive;
+    color: palevioletred;
+    text-shadow: 3px 3px 10px lightpink;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    font-size: 17pt;
+    font-family: 'Raleway', sans-serif;
+    font-style: oblique;
+    font-weight: bolder;
+    text-decoration: none;
+    color: cadetblue;
+}
+
+.spirit {
+    width: 200px;
+    padding: 10px;
+    border: solid 1px;
+    text-align: center;
+    border-radius: 5px;
+    list-style: none;
+}
+
+.spirit > img {
+    width: 200px;
+
+}
+
+.spirit > p {
+    margin: 0;
+}

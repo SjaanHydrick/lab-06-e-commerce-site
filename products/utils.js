@@ -41,3 +41,13 @@ export function renderSpirit(spirit) {
     return li;
 
 }
+
+export function findById(someArray, someId) {
+    for (const item of someArray) {
+        if (item.id === someId) {
+            return item;
+        } else {
+            return null;
+        }
+    }
+}

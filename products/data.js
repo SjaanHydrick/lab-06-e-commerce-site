@@ -12,7 +12,7 @@ export const spirits = [
         id: 'princessChild',
         name: 'Pretty Princess',
         image: 'pinkSpirit.jpg',
-        description: 'Lively spirit from the 1990s. Always leaves glitter behind. Singing is guaranteed.',
+        description: 'Lively spirit from the 1990s. Guaranteed to leave glitter behind. Always happy with a song.',
         category: 'Happy',
         price: 599,
     },
@@ -39,5 +39,14 @@ export const spirits = [
         description: 'Older spirit, circa 1950s. Will assist with recipes in kitchen. Always smells like fresh-baked cookies.',
         category: 'Happy',
         price: 899,
+    },
+    {
+        id: 'fishGhost',
+        name: 'Friendly Fish',
+        image: 'whiteSpirit.jpg',
+        description: 'A calming spirit of a well-loved goldfish. Emits bubbling sounds. Very low impact spirit.',
+        category: 'Happy',
+        price: 299,
     }
+
 ];

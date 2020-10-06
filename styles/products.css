@@ -2,10 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 body {
-    background-image: url(../2.jpg);
-    background-repeat: none;
-    background-size: cover;
-    background-color: gainsboro;
+    background-image: url(../repeatBackground.jpg);
+    background-repeat: repeat;
+    background-color: #0d1516;
 }
 
 h1 {
@@ -14,49 +13,65 @@ h1 {
     font-size: 40pt;
     font-family: 'Rochester', cursive;
     color: gainsboro;
-    text-shadow: 3px 3px 10px cornsilk;
+    text-shadow: 3px 3px 10px black;
 }
 
 .about {
-    display: flex;
-    justify-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
     text-align: center;
     width: auto;
     padding: 5px;
+    border: solid 1px #ca866e;
     border-radius: 10px;
     font-size: 17pt;
     font-family: Optima, sans-serif;
     font-weight: bolder;
     text-decoration: none;
     color: honeydew;
-    background-color: black;
+    background-color: #0d1516;
 }
 
 h3 {
-    margin-left: 75px;
+    margin-left: 37%;
+    margin-right: 36%;
+    width: auto;
+    border: solid 1px #ca866e;
+    text-align: center;
     font-family: 'Raleway', sans-serif;
-    font-size: 17pt;
-    width: 150px;
-    padding: 5px;
+    font-size: 25pt;
+    padding: 20px;
     border-radius: 10px;
-    background-color: black;
+    background-color: #0d1516;
     color: cyan;
 
 }
 
+#list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 15px;
+}
+
 li {
     list-style: none;
+    padding: 10px;
+    border: solid 1px #ca866e;
+    border-radius: 10px;
 }
 
 .spirit {
+    margin: 7px;
     width: 250px;
     text-align: center;
     list-style: none;
+    background-color: #0d1516;
 }
 
 .spirit > img {
     width: 200px;
     margin: 10px;
+    border-radius: 15px;
 
 }
 

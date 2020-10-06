@@ -9,6 +9,7 @@ export function renderSpirit(spirit) {
     const li = document.createElement('li');
     const name = document.createElement('p');
     const image = document.createElement('img');
+    const description = document.createElement('p');
     const price = document.createElement('p');
     const button = document.createElement('button');
 
@@ -22,6 +23,11 @@ export function renderSpirit(spirit) {
     image.src = `../Spirits/HappySpirits/${spirit.image}`;
 
     li.appendChild(image);
+
+    description.classList.add('description');
+    description.textContent = spirit.description;
+
+    li.appendChild(description);
 
     price.classList.add('price');
     price.textContent = `$${spirit.price.toFixed(2)}`;

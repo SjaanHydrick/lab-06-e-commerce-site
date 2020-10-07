@@ -2,6 +2,8 @@
 // import { example } from '../example.js';
 
 import { renderSpirit, findById, calcLineItem } from '../products/utils.js';
+import { renderTableRow } from '../shopping-cart/render-line-items.js';
+// import { calculateTotal } from '../shopping-cart/cart.js';
 
 const test = QUnit.test;
 
@@ -82,27 +84,6 @@ test('takes in an array and an id and returns a matching item', (expect) => {
     expect.equal(actual2, expected2);
 });
 
-// const princessQuant = {
-//     id: 'princessChild',
-//     quantity: 3,
-// };
-
-// const bookishQuant = {
-//     id: 'bookishSpirit',
-//     quantity: 1,
-// };
-
-// const puppyQuant = {
-//     id: 'puppySpirit',
-//     quantity: 2,
-// };
-
-// const quantArray = [
-//     princessQuant,
-//     bookishQuant,
-//     puppyQuant
-// ];
-
 test('takes quantity and the price and returns the total', (expect) => {
     //Arrange
     // Set up your arguments and expectations
@@ -118,3 +99,44 @@ test('takes quantity and the price and returns the total', (expect) => {
     // Make assertions about what is expected versus the actual result
     expect.equal(actual, expected);
 });
+
+test('renders a cart item', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const flowerChild = {
+        id: 'flowerChild',
+        quantity: 1,
+    };
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+
+    const dom = renderTableRow(flowerChild);
+    const html = dom.outerHTML;
+
+    //Expect
+    const expected = '<tr><td>Flower Child</td><img src="../Spirits/HappySpirits/lavendarSpirit.jpg"><td>$799</td><td>1</td><td>$799</td></tr>';
+
+    // Make assertions about what is expected versus the actual result
+    expect.equal(html, expected);
+});
+
+// test('returns total price', (expect) => {
+//     //Arrange
+//     // Set up your arguments and expectations
+//     const cart = [
+//         {
+//             id: 'bookishSpirit',
+//             quantity: 1,
+//         }
+//     ];
+//     //Act 
+//     // Call the function you're testing and set the result to a const
+
+//     const actual = calculateTotal(cart);
+
+//     //Expect
+//     const expected = 1397;
+//     // Make assertions about what is expected versus the actual result
+//     expect.equal(actual, expected);
+// });

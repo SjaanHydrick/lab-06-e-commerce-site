@@ -18,7 +18,7 @@ const totalCell = document.querySelector('.total');
 
 totalCell.textContent = `Total: $${total}`;
 
-function calculateTotal(cart) {
+export function calculateTotal(cart) {
     let accumulator = 0;
 
     for (let i = 0; i < cart.length; i++) {

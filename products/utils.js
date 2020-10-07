@@ -1,3 +1,5 @@
+
+
 export function renderSpirit(spirit) {
 
     const li = document.createElement('li');

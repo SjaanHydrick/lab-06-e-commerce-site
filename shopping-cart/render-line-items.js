@@ -20,9 +20,9 @@ export function renderTableRow(cartItem) {
 
     tdName.textContent = name;
     tdImg.src = `../Spirits/HappySpirits/${image}`;
-    tdPrice.textContent = `$${price}`;
+    tdPrice.textContent = `$${price}.00`;
 
-    const total = calcLineItem(cartItem.quantity, price);
+    const total = calcLineItem(cartItem.quantity, price).toFixed(2);
 
     tdSubtotal.textContent = `$${total}`;
 
@@ -30,4 +30,21 @@ export function renderTableRow(cartItem) {
 
     return tr;
 
+}
+
+//new function location
+export function calculateTotal(cart) {
+    let accumulator = 0;
+
+    for (let i = 0; i < cart.length; i++) {
+        const item = cart[i];
+
+        const trueItem = findById(sourceOfTruth, item.id);
+
+        const subtotal = calcLineItem(trueItem.price, item.quantity);
+
+        accumulator = accumulator + subtotal;
+    }
+
+    return accumulator;
 }

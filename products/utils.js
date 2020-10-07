@@ -26,7 +26,7 @@ export function renderSpirit(spirit) {
     li.appendChild(description);
 
     price.classList.add('price');
-    price.textContent = `$${spirit.price.toFixed(2)}`;
+    price.textContent = `$${spirit.price}.00`;
 
     li.appendChild(price);
 
@@ -35,7 +35,6 @@ export function renderSpirit(spirit) {
     li.appendChild(button);
 
     return li;
-
 }
 
 export function findById(someArray, someId) {
@@ -49,5 +48,4 @@ export function findById(someArray, someId) {
 export function calcLineItem(quantity, price) {
 
     return quantity * price;
-
 }

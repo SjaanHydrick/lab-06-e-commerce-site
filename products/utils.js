@@ -1,11 +1,5 @@
-// id: 'happyChild',
-// name: 'Flower Child',
-// image: 'lavendarSpirit.jpg',
-// description: 'Lovely young spirit from the 1970s. Will occassionally play records. A gardener in life, will help your flowers bloom.',
-// category: 'Happy',
-// price: 799,
-
 export function renderSpirit(spirit) {
+
     const li = document.createElement('li');
     const name = document.createElement('p');
     const image = document.createElement('img');
@@ -46,8 +40,12 @@ export function findById(someArray, someId) {
     for (const item of someArray) {
         if (item.id === someId) {
             return item;
-        } else {
-            return null;
         }
     }
+}
+
+export function calcLineItem(quantity, price) {
+
+    return quantity * price;
+
 }

@@ -48,7 +48,7 @@ a:visited{
 }
 
 h3 {
-    margin-top: 150px;
+    margin-top: 100px;
     width: 300px;
     border: solid 1px #ca866e;
     text-align: center;
@@ -63,16 +63,40 @@ h3 {
 table {
     margin-top: 20px;
     width: 100%;
-}
-
-td, th {
-    border: solid 1px #ca866e;
-    padding: 5px;
-    font-family: 'Raleway', sans-serif;
+    text-align: center;
 }
 
 th {
+    width: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 18pt;
     color: #ca866e;
+    background-color: #0d1516;
+    border: solid 1px #ca866e;
+}
+
+td {
+    padding: 5px;
+    border: solid 1px #ca866e;
+    background-color: #0d1516;
+    font-size: 15pt;
+}
+
+tr {
+    height: auto;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    
+}
+
+img {
+    height: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: solid 1px #ca866e;
     background-color: #0d1516;
 }
 
@@ -84,9 +108,20 @@ th {
 }
 
 .unstyle {
-    border: none
+    border: none;
+    background-color: transparent;
 }
 
 button {
-
+    float: right;
+    margin-right: 10px;
+    margin-bottom: 30px;
+    width: 170px;
+    height: 40px;
+    border: solid 1px #ca866e;
+    border-radius: 10px;
+    color: #ca866e;
+    background-color: #0d1516;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15pt;
 }

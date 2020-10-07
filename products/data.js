@@ -51,19 +51,21 @@ export const spirits = [
 
 ];
 
-export const cart = [
 
-    {
-        id: 'flowerChild',
-        quantity: 1,
-    },
-    {
-        id: 'bookishSpirit',
-        quantity: 1,
-    },
-    {
-        id: 'fishGhost',
-        quantity: 2,
-    }
+// moving to localStorage
+// export const cart = [
 
-];
+//     {
+//         id: 'flowerChild',
+//         quantity: 1,
+//     },
+//     {
+//         id: 'bookishSpirit',
+//         quantity: 1,
+//     },
+//     {
+//         id: 'fishGhost',
+//         quantity: 2,
+//     }
+
+// ];

@@ -25,7 +25,6 @@ header {
     top: 0;
     width: 100%;
     height: 80px;
-    
 }
 
 span {
@@ -117,7 +116,16 @@ li {
 .spirit > button {
     margin-top: 10px;
     font-family: Optima, sans-serif;
-    background-color: gainsboro;
+    background-color: #ca866e;
+    color: #0d1516;
     border-radius: 5px;
     width: 100px;
+}
+
+.dropDown {
+    width: 40px;
+    color: #ca866e;
+    background-color: #0d1516;
+    border: solid 1px #ca866e;
+    border-radius: 5px;
 }

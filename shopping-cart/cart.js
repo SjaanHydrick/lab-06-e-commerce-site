@@ -1,6 +1,5 @@
-import { spirits, cart } from '../products/data.js';
-import { renderTableRow } from './render-line-items.js';
-import { findById } from '../products/utils.js';
+import { cart } from '../products/data.js';
+import { renderTableRow, calculateTotal } from './render-line-items.js';
 
 const table = document.querySelector('tbody');
 
@@ -12,24 +11,8 @@ for (let i = 0; i < cart.length; i++) {
     table.appendChild(tr);
 }
 
-const total = calculateTotal(cart);
+const total = calculateTotal(cart).toFixed(2);
 
 const totalCell = document.querySelector('.total');
 
 totalCell.textContent = `Total: $${total}`;
-
-export function calculateTotal(cart) {
-    let accumulator = 0;
-
-    for (let i = 0; i < cart.length; i++) {
-        const item = cart[i];
-
-        const trueItem = findById(spirits, item.id);
-
-        const subtotal = trueItem.price * item.quantity;
-
-        accumulator = accumulator + subtotal;
-    }
-
-    return accumulator;
-}

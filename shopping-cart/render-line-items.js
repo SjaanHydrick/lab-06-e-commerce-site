@@ -1,5 +1,8 @@
-import { spirits as sourceOfTruth } from '../products/data.js';
+import { spirits, spiritsSad, spiritsAngry } from '../products/data.js';
 import { findById, calcLineItem } from '../products/utils.js';
+
+const spiritsArray = spirits.concat(spiritsSad);
+const finalSpiritsArray = spiritsArray.concat(spiritsAngry);
 
 export function renderTableRow(cartItem) {
 
@@ -12,7 +15,7 @@ export function renderTableRow(cartItem) {
 
     tdQuantity.textContent = cartItem.quantity;
 
-    const spiritData = findById(sourceOfTruth, cartItem.id);
+    const spiritData = findById(finalSpiritsArray, cartItem.id);
 
     const price = spiritData.price;
     const name = spiritData.name;
@@ -39,7 +42,7 @@ export function calculateTotal(cart) {
     for (let i = 0; i < cart.length; i++) {
         const item = cart[i];
 
-        const trueItem = findById(sourceOfTruth, item.id);
+        const trueItem = findById(finalSpiritsArray, item.id);
 
         const subtotal = calcLineItem(trueItem.price, item.quantity);
 

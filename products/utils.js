@@ -1,6 +1,5 @@
 export const CART = 'CART';
 
-
 export function renderSpirit(spirit) {
 
     const li = document.createElement('li');
@@ -87,7 +86,6 @@ export function findById(someArray, someId) {
 }
 
 export function calcLineItem(quantity, price) {
-
     return quantity * price;
 }
 

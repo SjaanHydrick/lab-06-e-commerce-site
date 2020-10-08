@@ -30,7 +30,7 @@ orderButton.addEventListener('click', () => {
         alert(stringyCart);
 
         localStorage.clear();
-        window.location.href = '/';
+        window.location.href = '/lab-06-e-commerce-site/index.html';
     } else {
         orderButton.disabled = true;
     }

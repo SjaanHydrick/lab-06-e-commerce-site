@@ -7,25 +7,26 @@ body {
     background-color: #0d1516;
 }
 
-h1 {
-    margin: 0;
-    margin-left: 20px;
-    display: flex;
-    justify-content: left;
-    font-size: 40pt;
-    font-family: 'Rochester', cursive;
-    color: gainsboro;
-    text-shadow: 3px 3px 10px black;
-}
-
 header {
+    width: 100%;
     overflow: hidden;
     background-color: #0d1516;
     position: fixed;
     top: 0;
-    width: 100%;
+    left: 0;
     height: 80px;
-    
+    border-bottom: solid 1px #ca866e;
+}
+
+h1 {
+    margin-left: 20px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: left;
+    font-size: 30pt;
+    font-family: 'Rochester', cursive;
+    color: gainsboro;
+    text-shadow: 3px 3px 10px black;
 }
 
 span {
@@ -39,8 +40,9 @@ span {
 }
 
 a:link {
+    margin-left: 20px;
     color: #ca866e;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 a:visited{

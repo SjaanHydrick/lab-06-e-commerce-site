@@ -63,6 +63,22 @@ a:visited{
     background-color: #0d1516;
 }
 
+#purchase-warning {
+    margin-left: 35%;
+    margin-right: 35%;
+    text-align: center;
+    width: auto;
+    padding: 5px;
+    border: solid 1px #ca866e;
+    border-radius: 10px;
+    font-size: 13pt;
+    font-family: Optima, sans-serif;
+    font-weight: bolder;
+    text-decoration: none;
+    color: gainsboro;
+    background-color: #0d1516;
+}
+
 h3 {
     margin-left: 37%;
     margin-right: 36%;
@@ -75,10 +91,29 @@ h3 {
     border-radius: 10px;
     background-color: #0d1516;
     color: cyan;
+}
 
+#sad {
+    color: mediumpurple;
+}
+
+#angry {
+    color: red;
 }
 
 #list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 15px;
+}
+
+#sad-spirits {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 15px;
+}
+
+#angry-spirits {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin: 15px;
@@ -99,11 +134,10 @@ li {
     background-color: #0d1516;
 }
 
-.spirit > img {
+img {
     width: 200px;
     margin: 10px;
     border-radius: 15px;
-
 }
 
 .spirit > p {

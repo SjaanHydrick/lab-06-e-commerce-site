@@ -30,7 +30,7 @@ orderButton.addEventListener('click', () => {
         alert(stringyCart);
 
         localStorage.clear();
-        window.location.href = '/';
+        window.location.href = '../index';
     } else {
         orderButton.disabled = true;
     }

@@ -63,11 +63,11 @@ export function renderSpirit(spirit) {
         if (itemInCart === undefined) {
             const newCartItem = {
                 id: spirit.id,
-                quantity: dropDown.value,
+                quantity: Number(dropDown.value),
             };
             cart.push(newCartItem);
         } else {
-            itemInCart.quantity++;
+            itemInCart.quantity += Number(dropDown.value);
         }
 
         setInLocalStorage(CART, cart);

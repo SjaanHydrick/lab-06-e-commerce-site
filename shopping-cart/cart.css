@@ -76,18 +76,18 @@ th {
     border: solid 1px #ca866e;
 }
 
-td {
-    padding: 5px;
-    border: solid 1px #ca866e;
-    background-color: #0d1516;
-    font-size: 15pt;
-}
-
 tr {
     height: auto;
     font-family: 'Raleway', sans-serif;
     color: white;
     
+}
+
+td {
+    /* padding: 5px; */
+    border: solid 1px #ca866e;
+    background-color: #0d1516;
+    font-size: 15pt;
 }
 
 img {

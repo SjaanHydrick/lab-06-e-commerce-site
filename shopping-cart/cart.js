@@ -23,16 +23,17 @@ const totalCell = document.querySelector('.total');
 totalCell.textContent = `Total: $${total}`;
 
 
-orderButton.addEventListener('click', () => { if (cart.length) {
-    const stringyCart = JSON.stringify(cart, true, 2);
+orderButton.addEventListener('click', () => { 
+    if (cart.length) {
+        const stringyCart = JSON.stringify(cart, true, 2);
 
-    alert(stringyCart);
+        alert(stringyCart);
 
-    localStorage.clear();
-    window.location.href = '/';
-} else {
-    orderButton.disabled = true;
-}
+        localStorage.clear();
+        window.location.href = '/';
+    } else {
+        orderButton.disabled = true;
+    }
 });
 
 

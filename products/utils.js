@@ -1,6 +1,5 @@
 export const CART = 'CART';
 
-
 export function renderSpirit(spirit) {
 
     const li = document.createElement('li');
@@ -63,11 +62,11 @@ export function renderSpirit(spirit) {
         if (itemInCart === undefined) {
             const newCartItem = {
                 id: spirit.id,
-                quantity: dropDown.value,
+                quantity: Number(dropDown.value),
             };
             cart.push(newCartItem);
         } else {
-            itemInCart.quantity++;
+            itemInCart.quantity += Number(dropDown.value);
         }
 
         setInLocalStorage(CART, cart);
@@ -87,7 +86,6 @@ export function findById(someArray, someId) {
 }
 
 export function calcLineItem(quantity, price) {
-
     return quantity * price;
 }
 

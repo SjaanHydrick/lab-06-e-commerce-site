@@ -1,7 +1,20 @@
-import { getLocalStorageSpirits, randomIntFromInterval, seedAndGetProducts } from '../products/utils.js';
+import { getLocalStorageSpirits, randomIntFromInterval } from '../products/utils.js';
+
+const PRODUCTS = 'PRODUCTS';
 
 export const form = document.querySelector('#form');
-const PRODUCTS = 'PRODUCTS';
+
+
+// export function addProduct(newSpirit) {
+//     const products = seedAndGetProducts();
+
+//     products.push(newSpirit);
+
+//     const stringifiedProducts = JSON.stringify(products);
+
+//     localStorage.setItem(PRODUCTS, stringifiedProducts);
+// }
+
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -34,12 +47,3 @@ form.addEventListener('submit', (e) => {
 });
 
 
-export function addProduct(newSpirit) {
-    const products = seedAndGetProducts();
-
-    products.push(newSpirit);
-
-    const stringifiedProducts = JSON.stringify(products);
-
-    localStorage.setItem(PRODUCTS, stringifiedProducts);
-}

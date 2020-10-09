@@ -1,4 +1,11 @@
+import { spirits, spiritsSad, spiritsAngry } from '../products/data.js';
+
+const spiritsArray = spirits.concat(spiritsSad);
+
+const hardCodedSpirits = spiritsArray.concat(spiritsAngry);
+
 export const CART = 'CART';
+const PRODUCTS = 'PRODUCTS';
 
 export function renderSpirit(spirit) {
 
@@ -101,4 +108,35 @@ export function setInLocalStorage(key, value) {
     localStorage.setItem(key, stringyItem);
 
     return value;
+}
+
+export function getLocalStorageSpirits() {
+    let localStorageSpirits = JSON.parse(localStorage.getItem(PRODUCTS));
+
+    if (!localStorageSpirits) {
+        const stringySpirits = JSON.stringify(hardCodedSpirits);
+
+        localStorage.setItem(PRODUCTS, stringySpirits);
+        localStorageSpirits = hardCodedSpirits;
+    }
+
+    return localStorageSpirits;
+}
+
+export function seedAndGetProducts() {
+    const products = localStorage.getItem(PRODUCTS);
+    if (products) {
+        return JSON.parse(products);
+    }
+    const stringifiedSeedSpirits = JSON.stringify(hardCodedSpirits);
+
+    localStorage.setItem(PRODUCTS, stringifiedSeedSpirits);
+
+    const seededLocalSpirts = localStorage.getItem(PRODUCTS);
+    
+    return JSON.parse(seededLocalSpirts);
+}
+
+export function randomIntFromInterval(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
 }

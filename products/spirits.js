@@ -1,32 +1,24 @@
-import { renderSpirit } from './utils.js';
-import { spirits, spiritsSad, spiritsAngry } from './data.js';
+import { renderSpirit, seedAndGetProducts } from './utils.js';
+
+const spirits = seedAndGetProducts();
 
 const ul = document.querySelector('#list');
+const ulSad = document.querySelector('#sad-spirits');
+const ulAngry = document.querySelector('#angry-spirits');
+const ulSecondHand = document.querySelector('#used-spirits');
+
 
 for (let i = 0; i < spirits.length; i++) {
     const spirit = spirits[i];
 
     const li = renderSpirit(spirit);
-
-    ul.appendChild(li);
-}
-
-const ulSad = document.querySelector('#sad-spirits');
-
-for (let i = 0; i < spiritsSad.length; i++) {
-    const spiritSad = spiritsSad[i];
-
-    const li = renderSpirit(spiritSad);
-
-    ulSad.appendChild(li);
-}
-
-const ulAngry = document.querySelector('#angry-spirits');
-
-for (let i = 0; i < spiritsAngry.length; i++) {
-    const spiritAngry = spiritsAngry[i];
-
-    const li = renderSpirit(spiritAngry);
-
-    ulAngry.appendChild(li);
+    if (spirit.category === 'Happy'){
+        ul.appendChild(li);
+    } else if (spirit.category === 'Sad'){
+        ulSad.appendChild(li);
+    } else if (spirit.category === 'Angry'){
+        ulAngry.appendChild(li);
+    } else {
+        ulSecondHand.appendChild(li);
+    }
 }

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="../products/products.css">
     <title>Madam Inmemoriam's Spirit Emporium Products</title>
 </head>
 
@@ -19,30 +19,18 @@
         <section>
             <div class="about" id="submit-about">Submit your gently used spirits for resale! <br> No questions asked, no guarantees given.</div>
             <h3 class="used">Submit Your Spirits</h3>
-                <form>
+                <form id="form">
                     <label>
-                        ID: <input name="id" />
-                    </label>
-                    <label>
-                        Name: <input name="name" />
-                    </label>
-                    <label>
-                        Image: <input name="image" />
+                        Spirit Name: <input name="name" />
                     </label>
                     <label>
                         Description: <input name="description" />
-                    </label>
-                    <label>
-                        Category: <input name="category" />
-                    </label>
-                    <label>
-                        Suggested Price: <input price="price" />
                     </label>
                     <button id="spiritsubmit">Submit Spirit</button>
                 </form>
         </section>
     </main>
 
-    <script type="module" src="admin.js"></script>
+    <script type="module" src="product-entry.js"></script>
 </body>
 </html>

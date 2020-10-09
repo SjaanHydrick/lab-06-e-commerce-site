@@ -7,24 +7,26 @@ body {
     background-color: #0d1516;
 }
 
-h1 {
-    margin: 0;
-    margin-left: 20px;
-    display: flex;
-    justify-content: left;
-    font-size: 40pt;
-    font-family: 'Rochester', cursive;
-    color: gainsboro;
-    text-shadow: 3px 3px 10px black;
-}
-
 header {
+    width: 100%;
     overflow: hidden;
     background-color: #0d1516;
     position: fixed;
     top: 0;
-    width: 100%;
+    left: 0;
     height: 80px;
+    border-bottom: solid 1px #ca866e;
+}
+
+h1 {
+    margin-left: 20px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: left;
+    font-size: 30pt;
+    font-family: 'Rochester', cursive;
+    color: gainsboro;
+    text-shadow: 3px 3px 10px black;
 }
 
 span {
@@ -38,8 +40,9 @@ span {
 }
 
 a:link {
+    margin-left: 20px;
     color: #ca866e;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 a:visited{
@@ -63,9 +66,30 @@ a:visited{
     background-color: #0d1516;
 }
 
+#submit-about {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
 #purchase-warning {
     margin-left: 35%;
     margin-right: 35%;
+    text-align: center;
+    width: auto;
+    padding: 5px;
+    border: solid 1px #ca866e;
+    border-radius: 10px;
+    font-size: 13pt;
+    font-family: Optima, sans-serif;
+    font-weight: bolder;
+    text-decoration: none;
+    color: gainsboro;
+    background-color: #0d1516;
+}
+
+.submit {
+    margin-left: 30%;
+    margin-right: 29%;
     text-align: center;
     width: auto;
     padding: 5px;
@@ -101,6 +125,12 @@ h3 {
     color: red;
 }
 
+.used {
+    margin-left: 30%;
+    margin-right: 29%;
+    color: lemonchiffon;
+}
+
 #list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -108,12 +138,18 @@ h3 {
 }
 
 #sad-spirits {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        margin: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 15px;
 }
 
 #angry-spirits {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 15px;
+}
+
+#used-spirits {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin: 15px;
@@ -156,6 +192,11 @@ img {
     width: 100px;
 }
 
+button:focus {
+    background-color: #0d1516;
+    color: #ca866e;
+}
+
 .dropDown {
     width: 40px;
     color: #ca866e;
@@ -163,3 +204,59 @@ img {
     border: solid 1px #ca866e;
     border-radius: 5px;
 }
+
+form {
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-bottom: 20px;
+    background-color: #0d1516;
+    border: solid 1px #ca866e;
+    border-radius: 15px;
+}
+
+label {
+    margin: 10px;
+    display: grid;
+    font-family: Optima, sans-serif;
+    font-size: 20pt;
+    font-weight: bold;
+    color: gainsboro;
+    color: gainsboro;
+    text-align: center;
+}
+
+input {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    height: 40px;
+    color: #0d1516;
+    font-family: 'Raleway', sans-serif;
+    font-size: 12pt;
+    background-color: #ca866e;
+    border: solid 1px #ca866e;
+    border-radius: 15px;
+}
+
+#spiritsubmit {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 30%;
+    margin-right: 30%;
+    width: 170px;
+    height: 40px;
+    border: solid 1px #ca866e;
+    border-radius: 10px;
+    color: #ca866e;
+    background-color: #0d1516;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15pt;
+}
+
+#spiritsubmit:focus {
+    background-color: #ca866e;
+    color: #0d1516;
+}
+

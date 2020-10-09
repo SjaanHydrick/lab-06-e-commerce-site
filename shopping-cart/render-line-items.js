@@ -1,8 +1,7 @@
-import { spirits, spiritsSad, spiritsAngry } from '../products/data.js';
-import { findById, calcLineItem } from '../products/utils.js';
 
-const spiritsArray = spirits.concat(spiritsSad);
-const finalSpiritsArray = spiritsArray.concat(spiritsAngry);
+import { findById, calcLineItem, seedAndGetProducts } from '../products/utils.js';
+
+export const localSpirits = seedAndGetProducts();
 
 export function renderTableRow(cartItem) {
 
@@ -15,7 +14,7 @@ export function renderTableRow(cartItem) {
 
     tdQuantity.textContent = cartItem.quantity;
 
-    const spiritData = findById(finalSpiritsArray, cartItem.id);
+    const spiritData = findById(localSpirits, cartItem.id);
 
     const price = spiritData.price;
     const name = spiritData.name;
@@ -42,7 +41,7 @@ export function calculateTotal(cart) {
     for (let i = 0; i < cart.length; i++) {
         const item = cart[i];
 
-        const trueItem = findById(finalSpiritsArray, item.id);
+        const trueItem = findById(localSpirits, item.id);
 
         const subtotal = calcLineItem(trueItem.price, item.quantity);
 

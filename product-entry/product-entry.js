@@ -3,8 +3,6 @@ import { getLocalStorageSpirits, randomIntFromInterval, seedAndGetProducts } fro
 export const form = document.querySelector('#form');
 const PRODUCTS = 'PRODUCTS';
 
-console.log(form);
-
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -12,7 +10,7 @@ form.addEventListener('submit', (e) => {
 
     const id = name.replace(/ /g, '');
     const name = data.get('name');
-    const image = 'greenSpirit3.jpg';
+    const image = 'greenSpirit2.jpg';
     const description = data.get('description');
     const category = 'used-spirits';
     const price = randomIntFromInterval(199, 1299);
@@ -32,6 +30,7 @@ form.addEventListener('submit', (e) => {
 
     const stringyLocalSpirits = JSON.stringify(localStorageSpirits);
     localStorage.setItem(PRODUCTS, stringyLocalSpirits);
+
 });
 
 

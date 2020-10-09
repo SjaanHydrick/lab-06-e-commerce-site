@@ -8,9 +8,9 @@ form.addEventListener('submit', (e) => {
 
     const data = new FormData(form);
 
-    const id = name.replace(/ /g, '');
     const name = data.get('name');
-    const image = 'greenSpirit2.jpg';
+    const id = name.replace(/ /g, '');
+    const image = 'greenSpirit.jpg';
     const description = data.get('description');
     const category = 'used-spirits';
     const price = randomIntFromInterval(199, 1299);

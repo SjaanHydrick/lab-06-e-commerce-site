@@ -1,11 +1,11 @@
-import { addProduct } from '../products/product-entry.js';
+import { addProduct } from '../products/utils.js';
 
 const test = QUnit.test;
 
 test('addProduct should take in a product object and add it to local storage (returning nothing)', (expect) => {
     const newSpirit = {
         name: 'spooks',
-        price: 299
+        description: 'a super spooksy ghost'
     };
     const expectation = [
         {
@@ -55,7 +55,8 @@ test('addProduct should take in a product object and add it to local storage (re
             description: 'A calming spirit of a well-loved goldfish. Emits bubbling sounds. Very low impact spirit.',
             category: 'Happy',
             price: 299,
-        },{
+        },
+        {
             id: 'barnGhost',
             name: 'Fallen Rider',
             image: 'blueSpirit1.jpg',
@@ -102,7 +103,8 @@ test('addProduct should take in a product object and add it to local storage (re
             description: 'Sorority sister, circa late-1980s. Enjoys large crowds, excellent for parties. Tends to manifest anger if allowed to linger late into the night.',
             category: 'Sad',
             price: 399,
-        },{
+        },
+        {
             id: 'jiltedBride',
             name: 'Jilted Bride',
             image: 'frostedSpirit.jpg',
@@ -128,7 +130,7 @@ test('addProduct should take in a product object and add it to local storage (re
         },
         {
             name: 'spooks',
-            price: 299
+            description: 'a super spooksy ghost'
         }
     ];
 

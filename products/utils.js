@@ -140,3 +140,13 @@ export function seedAndGetProducts() {
 export function randomIntFromInterval(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
+
+export function addProduct(newSpirit) {
+    const products = seedAndGetProducts();
+
+    products.push(newSpirit);
+
+    const stringifiedProducts = JSON.stringify(products);
+
+    localStorage.setItem(PRODUCTS, stringifiedProducts);
+}
